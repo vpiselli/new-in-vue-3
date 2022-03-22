@@ -1,4 +1,0 @@
-Lesson 7: Change Detection
-
-No code for this lesson. Just watch the video.
-No problem with change detection on Vue 3 as it was in Vue 2.
