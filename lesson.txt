@@ -1,5 +1,0 @@
-Lesson 10: Upgrading to Vue 3
-
-No code for this lesson. Just watch the video.
-Migration Guide from Vue 2 to Vue 3:
-https://v3-migration.vuejs.org/
