@@ -1,21 +1,29 @@
 <template>
-  <div class="border-t border-gray-500 py-2 mt-1">
-    <div>x: {{ mouseX }}</div>
-    <div>y: {{ mouseY }}</div>
-  </div>
+	<div class="border">
+		<button @click="isVisible = true">Show modal</button>
+		<teleport to="#modal-target">
+			<Modal v-if="isVisible" @emitClosed="isVisible = false">
+				Lorem ipsum dolor sit amet consectetur adipisicing elit.
+				Commodi voluptates facere libero, delectus obcaecati illum?
+				Officia placeat incidunt totam pariatur provident tenetur
+				iste nisi fugit, facere itaque ex quasi! Veniam.
+			</Modal>
+		</teleport>
+	</div>
 </template>
 
 <script>
-import { useMousePosition } from '../functions/useMousePosition'
+import Modal from './Modal.vue'
 
 export default {
- setup() {
-   const { x: mouseX, y: mouseY } = useMousePosition()
+	components: {
+		Modal,
+	},
 
-   return {
-     mouseX,
-     mouseY,
-   }
- }
+	data() {
+		return {
+			isVisible: false
+		}
+	}
 }
 </script>
